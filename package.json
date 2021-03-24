@@ -1,12 +1,12 @@
 {
   "name": "sparks-bank",
   "version": "1.0.0",
-  "description": "First project at internship",
+  "description": "internship task of the sparks foundation",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Snehal J",
+  "author": "Tanaya K",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
