@@ -1,0 +1,97 @@
+extends base.pug 
+
+block scripts
+  script(src='/static/customer.js')
+
+block style
+ style
+      include ../static/customer.css
+
+block content
+ #btn
+      button.open-button(onclick='openForm()') Send Money
+      button.open-button(onclick='openTransferHistory()') Transfer History
+
+ // Form HTML
+ #myForm.form-popup
+      form.form-container(action='/form' , method='post' )
+        h1 Send Money
+        label(for='Sender Name')
+          b Sender's Name
+        input#EnterSenderName(type='text' placeholder='Enter Sender Name' name='Sender_Name' required)
+        label(for='Receiver Name')
+          b Receiver's Name
+        input#EnterReceiverName(type='text' placeholder='Enter Receiver Name' name='Receiver_Name' required)
+        label(for='Amount')
+          b Amount in Rupees
+        input#enterAmount(type='number' placeholder='Enter Amount' name='Amount' required)
+        button.btn(type='submit' onclick='sendMoney()') Send
+        button.cancel(type='button' onclick='closeForm()') Close
+
+ // Transfer History HTML
+ #history.history-popup
+      .historycontainer
+        h4 Transfer History
+        #transaction
+          ol#transactionHistory
+        button.btnclose(type='button' onclick='closeTransferHistory()') Close
+
+ // Table HTML
+ table#table
+      thead#thead
+        tr
+          th NUMBER
+          th NAME
+          th E-MAIL ID
+          th CURRENT BALANCE IN RUPEES
+      tbody
+        tr
+          td 1
+          td Tanaya
+          td tanayaa@gmail.com
+          td#Tanaya 90000
+        tr
+          td 2
+          td Sai
+          td sai@gmail.com
+          td#Sai 80000
+        tr
+          td 3
+          td Aishwarya
+          td aishu@gmail.com
+          td#Aishwarya 40000
+        tr
+          td 4
+          td Dhanashri
+          td dhanu@gmail.com
+          td#Dhanashri 20000
+        tr
+          td 5
+          td Virat
+          td virat@gmail.com
+          td#Virat 12000
+        tr
+          td 6
+          td Madhusudan
+          td madhu@gmail.com
+          td#Madhusudan 60000
+        tr
+          td 7
+          td Anvi
+          td anvi@gmail.com
+          td#Anvi 110000
+        tr
+          td 8
+          td Tisha
+          td tisha@gmail.com
+          td#Tisha 70000
+        tr
+          td 9
+          td Shubham
+          td shubham@gmail.com
+          td#Shubham 30000
+        tr
+          td 10
+          td Shruti
+          td shruti@gmail.com
+          td#Shruti 110000
